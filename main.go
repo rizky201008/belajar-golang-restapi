@@ -36,5 +36,5 @@ func main() {
 	}
 
 	err := server.ListenAndServe()
-	helper.PanicIfErr(err)
+	helper.PanicIfError(err)
 }

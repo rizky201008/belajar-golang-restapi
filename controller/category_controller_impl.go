@@ -24,7 +24,6 @@ func (c *CategoryControllerImpl) Create(w http.ResponseWriter, r *http.Request, 
 	helper.ReadFromRequestBody(r, &categoryCreateRequest)
 
 	categoryResponse := c.CategoryService.Create(r.Context(), categoryCreateRequest)
-
 	webResponse := web.WebResponse{
 		Code:   200,
 		Status: "ok",
@@ -40,12 +39,11 @@ func (c *CategoryControllerImpl) Update(w http.ResponseWriter, r *http.Request, 
 
 	categoryId := params.ByName("categoryId")
 	id, err := strconv.Atoi(categoryId)
-	helper.PanicIfErr(err)
+	helper.PanicIfError(err)
 
 	categoryUpdateRequest.Id = id
 
 	categoryResponse := c.CategoryService.Update(r.Context(), categoryUpdateRequest)
-
 	webResponse := web.WebResponse{
 		Code:   200,
 		Status: "ok",
@@ -58,9 +56,9 @@ func (c *CategoryControllerImpl) Update(w http.ResponseWriter, r *http.Request, 
 func (c *CategoryControllerImpl) Delete(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
 	categoryId := params.ByName("categoryId")
 	id, err := strconv.Atoi(categoryId)
-	helper.PanicIfErr(err)
-	c.CategoryService.Delete(r.Context(), id)
+	helper.PanicIfError(err)
 
+	c.CategoryService.Delete(r.Context(), id)
 	webResponse := web.WebResponse{
 		Code:   200,
 		Status: "ok",
@@ -72,7 +70,7 @@ func (c *CategoryControllerImpl) Delete(w http.ResponseWriter, r *http.Request, 
 func (c *CategoryControllerImpl) FindById(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
 	categoryId := params.ByName("categoryId")
 	id, err := strconv.Atoi(categoryId)
-	helper.PanicIfErr(err)
+	helper.PanicIfError(err)
 
 	categoryResponse := c.CategoryService.FindById(r.Context(), id)
 	webResponse := web.WebResponse{
@@ -86,7 +84,6 @@ func (c *CategoryControllerImpl) FindById(w http.ResponseWriter, r *http.Request
 
 func (c *CategoryControllerImpl) FindAll(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
 	categoryResponses := c.CategoryService.FindAll(r.Context())
-
 	webResponse := web.WebResponse{
 		Code:   200,
 		Status: "ok",
