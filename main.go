@@ -4,12 +4,12 @@ import (
 	"github.com/go-playground/validator"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/julienschmidt/httprouter"
-	"github.com/rizky201008/belajar-golang-restful-api/app"
-	"github.com/rizky201008/belajar-golang-restful-api/controller"
-	"github.com/rizky201008/belajar-golang-restful-api/exception"
-	"github.com/rizky201008/belajar-golang-restful-api/helper"
-	"github.com/rizky201008/belajar-golang-restful-api/repository"
-	"github.com/rizky201008/belajar-golang-restful-api/service"
+	"github.com/rizky201008/belajar-golang-restapi/app"
+	"github.com/rizky201008/belajar-golang-restapi/controller"
+	"github.com/rizky201008/belajar-golang-restapi/exception"
+	"github.com/rizky201008/belajar-golang-restapi/helper"
+	"github.com/rizky201008/belajar-golang-restapi/repository"
+	"github.com/rizky201008/belajar-golang-restapi/service"
 	"net/http"
 )
 

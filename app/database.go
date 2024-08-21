@@ -2,7 +2,7 @@ package app
 
 import (
 	"database/sql"
-	"github.com/rizky201008/belajar-golang-restful-api/helper"
+	"github.com/rizky201008/belajar-golang-restapi/helper"
 	"time"
 )
 

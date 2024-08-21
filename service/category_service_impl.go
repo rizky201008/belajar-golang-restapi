@@ -4,11 +4,11 @@ import (
 	"context"
 	"database/sql"
 	"github.com/go-playground/validator"
-	"github.com/rizky201008/belajar-golang-restful-api/exception"
-	"github.com/rizky201008/belajar-golang-restful-api/helper"
-	"github.com/rizky201008/belajar-golang-restful-api/model/domain"
-	"github.com/rizky201008/belajar-golang-restful-api/model/web"
-	"github.com/rizky201008/belajar-golang-restful-api/repository"
+	"github.com/rizky201008/belajar-golang-restapi/exception"
+	"github.com/rizky201008/belajar-golang-restapi/helper"
+	"github.com/rizky201008/belajar-golang-restapi/model/domain"
+	"github.com/rizky201008/belajar-golang-restapi/model/web"
+	"github.com/rizky201008/belajar-golang-restapi/repository"
 )
 
 type CategoryServiceImpl struct {

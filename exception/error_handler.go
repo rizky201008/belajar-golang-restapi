@@ -2,8 +2,8 @@ package exception
 
 import (
 	"fmt"
-	"github.com/rizky201008/belajar-golang-restful-api/helper"
-	"github.com/rizky201008/belajar-golang-restful-api/model/web"
+	"github.com/rizky201008/belajar-golang-restapi/helper"
+	"github.com/rizky201008/belajar-golang-restapi/model/web"
 	"net/http"
 )
 
