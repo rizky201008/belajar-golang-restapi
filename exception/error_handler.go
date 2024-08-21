@@ -1,7 +1,6 @@
 package exception
 
 import (
-	"fmt"
 	"github.com/rizky201008/belajar-golang-restapi/helper"
 	"github.com/rizky201008/belajar-golang-restapi/model/web"
 	"net/http"
@@ -17,7 +16,6 @@ func ErrorHandler(w http.ResponseWriter, r *http.Request, err interface{}) {
 
 func notFoundError(w http.ResponseWriter, r *http.Request, err interface{}) bool {
 	exception, ok := err.(NotFoundError)
-	fmt.Println("notFoundError", err)
 	if ok {
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusNotFound)
