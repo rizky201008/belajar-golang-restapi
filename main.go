@@ -8,6 +8,7 @@ import (
 	"github.com/rizky201008/belajar-golang-restapi/controller"
 	"github.com/rizky201008/belajar-golang-restapi/exception"
 	"github.com/rizky201008/belajar-golang-restapi/helper"
+	"github.com/rizky201008/belajar-golang-restapi/middleware"
 	"github.com/rizky201008/belajar-golang-restapi/repository"
 	"github.com/rizky201008/belajar-golang-restapi/service"
 	"net/http"
@@ -32,7 +33,7 @@ func main() {
 
 	server := http.Server{
 		Addr:    ":3333",
-		Handler: router,
+		Handler: middleware.NewAuthMiddleware(router),
 	}
 
 	err := server.ListenAndServe()
