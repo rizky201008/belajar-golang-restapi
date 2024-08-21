@@ -1,4 +1,4 @@
-module github.com/rizky201008/belajar-golang-restful-api
+module github.com/rizky201008/belajar-golang-restapi
 
 go 1.22.0
 
